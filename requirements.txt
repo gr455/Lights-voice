@@ -1,0 +1,7 @@
+Prerequisites to run this program are:
+1) Python3
+2) (hardware)Arduino and essential hardware
+3) speech_recognition
+4) Pyaudio
+5) Pyserial
+6) Retry
