@@ -9,7 +9,7 @@ off='0'
 
 myard=serial.Serial('COM4',9600,timeout=1)
 print("hi")
-while("true"):
+while(True):
     @retry(Exception, delay=0)
 
     def rerunrthis():
