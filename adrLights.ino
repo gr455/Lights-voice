@@ -1,24 +1,21 @@
-/*
-
-*/
-
-//change port number according to your configuration
+int out_pin = 10;
 void setup() {
-    pinMode(10,OUTPUT);
+    pinMode(out_pin,OUTPUT);
     Serial.begin(9600);
 }
 
 void loop() {
-  if(Serial.available()>0){
+  while(Serial.available()<0); // Won't go further if Serial input is not available. Saves processing power
+  
    char serdat=Serial.read();
     
     if(serdat=='1'){
-      digitalWrite(10,HIGH);
+      digitalWrite(out_pin,HIGH);
     }
     
     else if(serdat=='0'){
-      digitalWrite(10,LOW);
+      digitalWrite(out_pin,LOW);
     }
-  }
+  
 
 }
